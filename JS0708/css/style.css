@@ -1,0 +1,64 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper-tabs,.wrapper-form{
+  margin: 3em auto;
+  border-radius: 5px;
+  width: 600px;
+  height: auto;
+}
+#tabs a{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #337ab3;
+  background: #fff;
+}
+#tabs ul{
+  list-style-type: none;
+  border-bottom: 1px solid #000;
+}
+#tabs ul li {
+  display: inline-block;
+  margin-bottom: -1px;
+  border-radius: 5px;
+}
+#tabs a.active-tab{
+  color: #000;
+  border: 1px groove black;
+  border-radius: 5px 5px 0 0;
+  border-bottom-color: transparent;
+  box-shadow: inset 2px 2px 2px #969696;
+}
+#tab-content div{
+  display: none;
+  background: #fff;
+}
+p{
+  margin-top: 1em;
+}
+.tool-tips label{
+  display: inline-block;
+  width: 100px;
+}
+input{
+  margin: 10px 10px 10px 10px;
+}
+span{
+  border: 1px solid black;
+}
+.dom-tooltip{
+  display: none;
+}
+button{
+  font-family: 'Roboto', sans-serif;
+  padding: .6em .4em;
+  margin-top: 1em;
+  border-radius: .2em;
+  background: #fff;
+  border: 1px solid #555;
+}

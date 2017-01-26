@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS0910</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/cusel.css" />
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<!--  <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>-->
+<!--  <script type="text/javascript" src="js/cusel.min.js"></script>-->
+<!--  <script type="text/javascript" src="js/slideMenu.js"></script>-->
+	<script src="https://use.fontawesome.com/a7161e1ff3.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+<div class="header">
+	<video src="img/hanni_full00.mp4" width="100%" preload autoplay loop>
+		<h1 class="h1-headline">HANNIBAL TV SHOW </h1>
+	</video>
+	
+ 
+</div>
+
+<div class="content">	
+
+  	<div class="about">
+			<h2>About</h2>
+			<article>
+				<p>This page is about TV Show "Hannibal".</p>
+				<p>It was started on April 4 2013.</p>
+				<p>Developed by Bryan Fuller. Showrunner NBC.</p>
+				<p>The series is based on characters and elements appearing in Thomas Harris' novels "Red Dragon" (1981) and "Hannibal" (1999)</p>
+				<p>The show is focusing on the relationship of FBI special investigator Will Graham (Hugh Dancy) and Dr. Hannibal Lecter (Mads Mikkelsen), a forensic psychiatrist destined to become Graham's most cunning enemy</p>
+			</article>
+  	</div>
+  	
+  	
+   	<h2>Questionary</h2>
+   	<div class="quest">
+			<form class="form form-seasons" action="#">
+				<h3 class="form__head-for-checkbox">Seasons you've seen</h3>
+				<div class="form__checkbox-wrapper">
+					<input type="checkbox" id="form-seasons__s00" class="form__input-checkbox" />
+					<label for="form-seasons__s00">None</label>
+				</div>
+				<div class="form__checkbox-wrapper">
+					<input type="checkbox" id="form-seasons__s01" class="form__input-checkbox" />
+					<label for="form-seasons__s01">First</label>
+				</div>
+				<div class="form__checkbox-wrapper">
+					<input type="checkbox" id="form-seasons__s02" class="form__input-checkbox"/>
+					<label for="form-seasons__s02">Second</label>
+				</div>
+				<div class="form__checkbox-wrapper">
+					<input type="checkbox" id="form-seasons__s03" class="form__input-checkbox" />
+					<label for="form-seasons__s03">Third</label>
+				</div>
+
+			</form>
+
+			<form class="form form-hannibal-universe" action="#">
+				<h3 class="form__head-for-checkbox">Have you: </h3>
+
+				<div class="form__checkbox-wrapper">
+
+					<label for="form-hannibal-usiverse__opt-read-books">Read book</label>
+					<input type="checkbox" id="form-hannibal-usiverse__opt-read-books" class="form__input-checkbox">
+
+				</div>
+				<!--move out when checked ReadBooks-->
+
+				<div class="form__sub-check-books">
+				<h4 class="form__head-for-checkbox">Which one:</h4>
+					<div class="form__checkbox-wrapper">
+						<label for="opt-book-dragon">Red Dragon (1981)</label>
+						<input type="checkbox" id="opt-book-dragon" class="form__input-checkbox" />
+					</div>
+					<div class="form__checkbox-wrapper">
+						<label for="opt-book-silence">The Silence of the Lambs (1988)</label>
+						<input type="checkbox" id="opt-book-silence" class="form__input-checkbox" />
+					</div>
+					<div class="form__checkbox-wrapper">
+						<label for="opt-book-hannibal">Hannibal (1999)</label>
+						<input type="checkbox" id="opt-book-hannibal" class="form__input-checkbox" />
+					</div>
+					<div class="form__checkbox-wrapper">
+						<label for="opt-book-rising">Hannibal Rising (2006)</label>
+						<input type="checkbox" id="opt-book-rising" class="form__input-checkbox" />
+					</div>
+				</div>
+
+				<!-- hidden when unchecked ReadBooks, answers in sub-check don't counted in this case-->
+
+				<div class="form__checkbox-wrapper">
+
+					<label for="form-hannibal-usiverse__opt-saw-films">Seen films</label>
+					<input type="checkbox"  id="form-hannibal-usiverse__opt-saw-films" class="form__input-checkbox" />
+
+				</div>
+				<!--move out when checked SawFilms-->
+
+				<div class="form__sub-check-films">
+					<h4 class="form__head-for-checkbox">Which one:</h4>
+					<div class="form__checkbox-wrapper">
+						<label for="opt-film-Manhunter">Manhunter (1986)</label>
+						<input type="checkbox"  id="opt-film-silence" class="form__input-checkbox" />
+					</div>
+					<div class="form__checkbox-wrapper">
+						<label for="opt-film-silence">The Silence of the Lambs (1991)</label>
+						<input type="checkbox"  id="opt-film-silence" class="form__input-checkbox" />
+					</div>
+					<div class="form__checkbox-wrapper">
+						<label for="opt-film-hannibal">Hannibal (2001)</label>
+						<input type="checkbox"  id="opt-film-hannibal" class="form__input-checkbox" />
+					</div>
+					<div class="form__checkbox-wrapper">
+						<label for="opt-film-dragon">Red Dragon (2002)</label>
+						<input type="checkbox"  id="opt-film-dragon" class="form__input-checkbox" />
+					</div>
+					<div class="form__checkbox-wrapper">
+						<label for="opt-film-rising">Hannibal Rising (2007)</label>
+						<input type="checkbox"  id="opt-film-rising" class="form__input-checkbox" />
+					</div>
+				</div>
+
+				<!-- hidden when unchecked ReadBooks, answers in sub-check don't counted in this case-->
+
+			</form>
+
+		<div class="select-wrapper">
+				<label for="character"><h3>Favorite character</h3></label>
+				<select name="character" id="character">
+					<option value="img/gallery/cast/FullCast.jpg" actor="Some actor">Choose on of...</option> Full Cast
+
+					<optgroup label="Main Characters">   	
+						<option value="img/gallery/cast/charHannibal.JPG" actor="Mads Mikkelsen">Dr. Hannibal Lecter</option> 
+						<option value="img/gallery/cast/charWill.JPG" actor="Hugh Dancy">Will Graham</option> 
+						<option value="img/gallery/cast/charJack.JPG" actor="Laurence Fishburne">Jack Crowford</option> 
+						<option value="img/gallery/cast/charAlana.JPG" actor="Caroline Dhavernas">Dr. Alana Bloom</option> 
+					</optgroup>
+
+					<optgroup label="Second Characters">
+						<option value="img/gallery/cast/charBedelia.JPG" actor="Gillian Anderson">Dr. Bedelia Du Maurier</option> 
+						<option value="img/gallery/cast/charAbigail.JPG" actor="Kacey Rohl">Abigail Hobbs</option> 
+						<option value="img/gallery/cast/charBeverly.JPG" actor="Hettienne Park">Beverly Katz</option> 
+						<option value="img/gallery/cast/charJimmy.JPG" actor="Scott Thompson">Jimmy Price</option> 
+						<option value="img/gallery/cast/charBrian.JPG" actor= "Aaron Abrams">Brian Zeller</option> 
+						<option value="img/gallery/cast/charFrederick.JPG" actor="Raúl Esparza">Dr. Frederick Chilton</option> 
+						<option value="img/gallery/cast/charFreddie.JPG" actor="Lara Jean Chorostecki">Freddie Lounds</option> 
+						<option value="img/gallery/cast/charMargot.JPG" actor="Katharine Isabelle">Margot Verger</option> 
+						<option value="img/gallery/cast/charMason.JPG" actor="Joe Anderson">Mason Verger</option>
+					</optgroup>
+
+					<optgroup label="Special Guests">
+						<option value="img/gallery/cast/charGideon.JPG" actor="Eddie Izzard">Dr. Abel Gideon</option> 
+						<option value="img/gallery/cast/charDragon.JPG" actor="Richard Armitage">Francis Dolarhyde</option>        	
+					</optgroup>
+				</select>
+			</div>
+
+			<div class="performedby">
+				<h3>Performed by</h3>
+				<p class="actor">Some actor</p>
+			</div>
+
+			<div class="select-img-wrapper">
+				<img src="img/gallery/cast/FullCast.jpg" class="img-char" alt="characters">
+			</div>
+
+<!--			<div class="clearfix"></div>-->
+   	</div>
+  	
+ 		<h2>Gallery</h2>
+ 		
+ 	 <div class="jcarousel-wrapper">
+      <div class="jcarousel">
+        <ul>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E02.720p[13-03-58].JPG" alt="Title02"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E02.720p[12-22-25].JPG" alt="Title01"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E01.720p[16-25-17].JPG" alt="Title"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E03.720p[17-09-35].JPG" alt="Title02"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E02.720p[13-07-58].JPG" alt="Title02"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E12.720p[22-56-38].JPG" alt="Title02"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E13.720p[22-52-46].JPG" alt="Title02"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E12.720p[22-56-39].JPG" alt="Title02"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E02.720p[13-02-41].JPG" alt="Title02"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E02.720p[13-03-06].JPG" alt="Title02"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E03.720p[16-55-49].JPG" alt="Title02"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E07.720p[03-15-22].JPG" alt="Title02"></li>
+          <li data-name="Title00"><img src="img/gallery/Hannibal.S02E04.720p[22-35-04].JPG" alt="Title02"></li>
+        </ul>
+      </div>
+      <a href="#" class="jcarousel-control-prev"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </a>
+      <a href="#" class="jcarousel-control-next"> <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+      <p class="jcarousel-pagination"></p>
+    </div>
+  </div>
+  
+  <div class="footer">
+  	<ul class="footer_menu">
+  		<li class="menu__item"><a href="#">home</a></li>
+  		<li class="menu__item"><a href="http://www.nbc.com/">nbc tv</a></li>
+  		<li class="menu__item"><a href="http://www.imdb.com/title/tt2243973/">imdb</a></li>
+  		<li class="menu__item"><a href="http://www.nbc.com/hannibal?nbc=1">site</a></li>
+  		<li class="menu__item"><a href="http://www.DanielBulavsky.github.io/CurriculumVitae/">authors</a></li>
+  	</ul>
+  </div>
+<!--  <script type="text/javascript" src="js/jquery-ui.min.js"></script>-->
+<!--  <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>-->
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/js.checkbox.js"></script>
+  <script type="text/javascript" src="js/select.js"></script>
+
+ 
+</body>
+
+</html>
