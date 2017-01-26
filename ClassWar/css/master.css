@@ -1,0 +1,61 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.ui{
+	width: 204px;
+	/*height: 100px;*/
+	border: 1px solid #000;
+
+}
+.map{
+	width: 204px;
+	border: 1px solid #000;
+}
+.cell{
+	width: 100px;
+	height: 100px;
+	border: 1px solid #0f0;
+	display: inline-block;
+	cursor: pointer;
+}
+.cell_free{
+	background-color: #0f0;
+}
+.cell_resource{
+	background-color: #00f;
+}
+.cell_unit{
+	background-color: #f00;
+}
+
+
+/*UI*/
+
+.button{
+	width: auto;
+	height: auto;
+	border: 0.125em solid #ccc;
+	background-color: #bbb;
+}
+.button:hover{
+	cursor: pointer;
+	border-color: #eee;
+	background-color: #ddd;
+}
+
+.min-map{
+	width: 220px;
+
+}
+.min-map-cell{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #0f0;
+	text-align: center;
+}
+
+.selected_cell{
+	border: 1px solid #00f;
+}

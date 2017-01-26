@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>homework0501</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/style.css">
+	  <style>
+   @font-face {
+    font-family: 'hnt';
+    src: url('font/helveticaneuecyr-thin-webfont.eot');
+    src: url('font/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/helveticaneuecyr-thin-webfont.woff2') format('woff2'),
+         url('font/helveticaneuecyr-thin-webfont.woff') format('woff'),
+         url('font/helveticaneuecyr-thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  </style>
+</head>
+<body>
+	<nav class="menu">
+		<ul>
+			<li><a href="#">Meu YouBike</a></li>
+			<li class="vender-one">Vender</li>
+			<li><a href="#">Forum</a></li>
+			<li><a href="#">Contato</a></li>
+			<li><a href="#">Ajuda</a></li>
+			<li>|</li>
+			<li class="flag"><a href="#"></a></li>
+			<li>Minhas ofertas</li>
+			<li class="vender-one">Ola! <a href="#"> Entrar</a> ou <a href="#">Cadastre-se</a></li>
+		</ul>
+	</nav>
+	<div class="wrapper">
+	<header class="rhead">
+		Cadastre-se
+	</header>
+	<section class="rform">
+		<a href="#">
+			<img src="./img/facebook_button.png" class="facebook_button">
+<!--
+		<button class="face-log">
+			<svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+				<path d="M16.41 8.65h-3v-2a.8.8 0 0 1 .84-.91h2.12V2.51h-2.93a3.7 3.7 0 0 0-4 4v2.14H7.59V12h1.87v9.5h3.95V12h2.66l.34-3.35z"></path>
+			</svg>		
+		</button>
+-->
+		</a>
+		
+		
+		<p class="ou">OU</p>
+		<form>
+			<fieldset class="user-data">
+				<input type="text" required name="first_name" placeholder="First Name" oninvalid="this.setCustomValidity('Name is required field')" oninput="setCustomValidity('')">
+				<input type="text" required name="last_name" placeholder="Last Name" oninvalid="this.setCustomValidity('Last Name is required field')" oninput="setCustomValidity('')">
+				<input type="email" required name="email" placeholder="Email Address" oninvalid="this.setCustomValidity('Email is required field')" oninput="setCustomValidity('')">
+				<input type="password" required name="password" placeholder="Choose Password" oninvalid="this.setCustomValidity('Password is required field')" oninput="setCustomValidity('')">
+				<input type="password" required name="confirm" placeholder="Password Confirm" oninvalid="this.setCustomValidity('Please confirm the Password')" oninput="setCustomValidity('')">
+			</fieldset>
+			<fieldset class="checkform">
+				<label><input type="checkbox" class="check"> Send me Youbike updates and tips</label><br>
+			</fieldset>
+			<fieldset class="submitform">
+				<input type="submit" value="Create my Account"> 
+				<div class="policy">By clickin the button above, you agree to the Terms of Service
+				<br>
+				Xiew our Privacy Policy.
+				</div>
+			</fieldset>
+		</form>
+	</section>
+</div>
+</body>
+</html>

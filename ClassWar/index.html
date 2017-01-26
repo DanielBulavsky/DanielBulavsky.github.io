@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>ClassWar</title>
+	<link rel="stylesheet" type="text/css" href="css\master.css">
+</head>
+<body ng-cloak>
+
+	<div class="map" ng-controller="mapCtrl as mapCtrl">
+		<div class="cell" ng-repeat="renderCells in mapCtrl.map.renderCells track by $index" ng-click="mapCtrl.cellClick(mapCtrl.map.renderCells[$index])">
+			X: {{renderCells.coords.x}} <br>
+			Y: {{renderCells.coords.y}} <br>
+			<!-- $index: {{$index}} -->
+			<!-- <div>
+
+			</div> -->
+
+			<div ng-if="!renderCells.isFree">
+
+				<div ng-if="!renderCells.isResource">
+					<div class="unit" ng-controller='unitCtrl as unitCtrl'>
+						<div class="unit-show">{{unitCtrl.unit[renderCells.prisonedId].class}} Pl {{unitCtrl.unit[renderCells.prisonedId].playerId}}<br>
+						</div>
+					</div>
+				</div>
+
+				<div ng-if="renderCells.isResource">
+					<div class="res" ng-controller='resCtrl as resCtrl'>
+						<div class="res-show">{{resCtrl.resource[renderCells.prisonedId].type}} Id {{renderCells.prisonedId}}<br>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div ng-if="renderCells.isFree">
+				Status: Free <br>
+			</div>
+
+
+		</div>
+		<div class="ui">
+			<div class="status-bar">
+				<div ng-if="!mapCtrl.selection.obj.isSelected">
+					<div ng-if="mapCtrl.clickedCell.isFree">
+						Cell Status: Free <br>
+						Cell X: {{mapCtrl.clickedCell.coords.x}} <br>
+						Cell Y: {{mapCtrl.clickedCell.coords.y}} <br>
+					</div>
+					<div ng-if="mapCtrl.clickedCell.isResource" ng-controller="resCtrl as resCtrl">
+						Cell Status: Resource <br>
+						Res Type: {{resCtrl.resource[mapCtrl.clickedCell.prisonedId].type}} <br>
+						Res Quantity: {{resCtrl.resource[mapCtrl.clickedCell.prisonedId].uantity}} <br>
+						Cell X: {{mapCtrl.clickedCell.coords.x}} <br>
+						Cell Y: {{mapCtrl.clickedCell.coords.y}} <br>
+					</div>
+
+				</div>
+				<div ng-if="mapCtrl.selection.obj.isSelected">
+					Cell Status: Unit <br>
+					Unit Player: {{mapCtrl.selection.obj.playerId}} <br>
+					Unit Class: {{mapCtrl.selection.obj.class}} <br>
+					Unit HP: {{mapCtrl.selection.obj.hp}} <br>
+					Unit DP: {{mapCtrl.selection.obj.dp}} <br>
+					Unit SP: {{mapCtrl.selection.obj.sp}} <br>
+					Unit X coord: {{mapCtrl.selection.obj.coords.x}} <br>
+					Unit Y coord: {{mapCtrl.selection.obj.coords.y}} <br>
+					Unit Res Type: {{mapCtrl.selection.obj.res.type}} <br>
+					Unit Res Quantity: {{mapCtrl.selection.obj.res.quantity}}
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div class="min-map" ng-controller="uiCtrl as uiCtrl">
+		<div class="min-map-cell {{uiCtrl.minMapWindow.cells[cells.id].style}}" ng-repeat="cells in uiCtrl.minMapWindow.cells track by cells.id" ng-click="uiCtrl.cellClick(cells.id)">
+			{{cells.status}}
+			<!-- {{cells.id}} -->
+		</div>
+		<!-- <div class="button save-game" ng-click="uiCtrl.saveGame()">Save Game</div> -->
+	</div>
+
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/mapCtrl.js"></script>
+	<script type="text/javascript" src="js/unitCtrl.js"></script>
+	<script type="text/javascript" src="js/resCtrl.js"></script>
+	<script type="text/javascript" src="js/playerCtrl.js"></script>
+	<script type="text/javascript" src="js/uiCtrl.js"></script>
+	<script type="text/javascript" src="js/mapFactory.js"></script>
+	<script type="text/javascript" src="js/unitFactory.js"></script>
+	<script type="text/javascript" src="js/resFactory.js"></script>
+	<script type="text/javascript" src="js/playerFactory.js"></script>
+	<script type="text/javascript" src="js/uiFactory.js"></script>
+</body>
+</html>
