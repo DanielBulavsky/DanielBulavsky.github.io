@@ -11,3 +11,20 @@ var ver = {
     return this;
   }
 }
+
+$(function () {
+  var oldToggle = $('.ui-min-map.panel');
+  oldToggle.toggle();
+  // console.log(oldToggle);
+  $('.button').on('click', function () {
+    var it = $(this);
+    var strAttr = it.attr('class');
+    var strClass = '.' + strAttr.slice(0, -7) + '.panel';
+    // console.log(strClass);
+    // console.log($(strClass));
+    var togglePanel = $(strClass);
+    togglePanel.toggle();
+    oldToggle.toggle();
+    oldToggle = togglePanel;
+  })
+})

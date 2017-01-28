@@ -1,3 +1,18 @@
+DOING
+	Adaptive window mobile first UI
+		UI
+			MAPPANEL => mw
+			CONTROLPANEL => cp
+				eventPanel
+					handleBar --> what unit/builiding can do
+					eventLog --> what going on
+				statusPanel
+					attrBar --> attr of cell/unit/res/building
+					selectBar --> selected cell/unit/res/building
+				upgradePanel
+					levelUpBar --> upgrade unit/building
+					previewBar --> preview of cell/unit/res/building
+				minMap
 TODO
 	Scale: css (borders, sprites), cells (percent), font:
 						Char: U - unit, R - resource, F - free;
@@ -29,6 +44,35 @@ Every unit have some SKILL POINTS
 This points PLAYER spend on ABILITIES
 Also PLAYER can names shablon of ABILITIES he choose once, for easy re-use
 There are ready TEMPLATE
+
+Controller ierarchy
+ui
+	map => mapCtlr
+	eventBar => exp from unit, res, map, player, builiding
+		handleBar => unit => player
+		eventLog => unit, res, map, player, building
+	statusBar => unit, map, res
+		attrBar => same
+		selectBar => same
+	minMap => ui
+
+	minMap, eventBar, statusBar => pic
+
+
+render in ui?
+
+building
+	id
+	playerId
+	coords[{x:bx, y:by}]
+	type -> house, blacksmith, barraks, archery, armory, artelery, shipyard,
+		house => make population
+		blacksmith => make tools
+			armory => armory
+			weaponary => weapon
+			civil => work tools
+
+without unit builting not functional
 
 CONVERT MARTIX INTO 1-DIMENTION ARRAY
 
