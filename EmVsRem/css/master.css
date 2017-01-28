@@ -1,9 +1,9 @@
-* {
+*{
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
-:root {
+:root{
   font-size: 24px;
 }
 @media(min-width: 800px) {
@@ -11,30 +11,52 @@
     font-size: 16px;
   }
 }
-body {
+body{
   max-width: 40rem;
   margin: 50px auto;
   padding: 1rem;
 }
 
-h1 {
+h1{
   font-size: 3rem;
 }
 
-p {
+p{
   font-size: 1rem;
 }
 
-.button {
-  font-size: 1rem;
+span{
+	font: bold italic 100% sans-serif;
+}
+
+.button{
+  display: inline-block;
   text-decoration: none;
   color: #666;
   font-weight: bold;
-  display: inline-block;
+}
+.button_em{
+  font-size: 1em;
   border: 0.0625em solid #ccc;
   border-radius: 0.1875em;
   padding: 0.6em 1.2em;
+	margin-left: 20px;
 }
+.button_rem{
+  font-size: 1rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.1875rem;
+  padding: 0.6rem 1.2rem;
+	margin-left: 35%;
+}
+.button_px{
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px 24px;
+	margin-left: 70%;
+}
+
 .button:hover {
   border-color: #999;
 }
